@@ -65,11 +65,14 @@ class MinhaGUI:
         try:
             inserir_usuario(self.conexao, self.login.get(), self.senha.get())
             messagebox.showinfo('Cadastro realizado com sucesso!','Usuário Cadastrado')
+            self.janela_cadastro.destroy()
             
         except:
             messagebox.showinfo('Erro','Usuário inválido ou já cadastrado')
             
         self.conexao = desconecta_bd('Usuarios.db')
+    
+
     
     def logar(self):
         

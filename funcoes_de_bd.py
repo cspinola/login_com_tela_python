@@ -13,8 +13,8 @@ def criar_tabela(conexao):
     cursor = conexao.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS Usuarios (
-            login VARCHAR(25) PRIMARY KEY,
-            senha VARCHAR(250)  NOT NULL
+            login text PRIMARY KEY,
+            senha text  NOT NULL
         );
     ''')
     conexao.commit()
